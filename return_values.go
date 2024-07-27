@@ -1,0 +1,42 @@
+package main
+
+import (
+	"fmt"
+)
+
+func yearsUntilEvents(age int) (
+	yearsUntilAdult int,
+	yearsUntilDrinking int,
+	yearsUntilRentingACar int) {
+	yearsUntilAdult = 18 - age
+	if yearsUntilAdult < 0 {
+		yearsUntilAdult = 0
+	}
+	yearsUntilDrinking = 21 - age
+	if yearsUntilDrinking < 0 {
+		yearsUntilDrinking = 0
+	}
+	yearsUntilRentingACar = 25 - age
+	if yearsUntilRentingACar < 0 {
+		yearsUntilRentingACar = 0
+	}
+	return
+}
+
+// don't edit below this line
+
+func test(age int) {
+	fmt.Println("Age:", age)
+	yearsUntilAdult, yearsUntilDrinking, yearsUntilRentingACar := yearsUntilEvents(age)
+	fmt.Println("You are an adult in", yearsUntilAdult, "years")
+	fmt.Println("You can drink in", yearsUntilDrinking, "years")
+	fmt.Println("You can rent a car in", yearsUntilRentingACar, "years")
+	fmt.Println("=========================================")
+}
+
+func main() {
+	test(4)
+	test(10)
+	test(22)
+	test(35)
+}
