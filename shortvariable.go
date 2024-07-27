@@ -5,6 +5,6 @@ import (
 )
 
 func main() {
-	penniesPerText := 2
+	penniesPerText := 2.0
 	fmt.Printf("The type of penniesPerText is %T\n", penniesPerText)
 }
